@@ -29,15 +29,29 @@ function App() {
   console.log(value);
   return (
     <>
-      <textarea
-        value={value}
-        onChange={handleChange}
-        name=""
-        id=""
-        cols="30"
-        rows="10"
-        onKeyUp={handleChange2}
-      ></textarea>
+      <div id="root">
+        <header>
+          <h1>Keyword numbering</h1>
+        </header>
+
+        <div id="form">
+          <div className="fish" id="fish"></div>
+          <div className="fish" id="fish2"></div>
+
+          <form id="waterform" method="post">
+            <div className="formgroup" id="message-form">
+              <label htmlFor="message">Enter keyword and hit enter</label>
+              <textarea
+                value={value}
+                onChange={handleChange}
+                id="message"
+                name="message"
+                onKeyUp={handleChange2}
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 }
